@@ -2,8 +2,8 @@ import imaplib
 import email
 
 ORG_EMAIL = "@xane.ai"
-FROM_EMAIL = "abhimanyu.vashisht" + ORG_EMAIL
-FROM_PWD = "PASSWORD_HERE"
+FROM_EMAIL = "xane" + ORG_EMAIL
+FROM_PWD = "Xanexane123ai"
 SMTP_SERVER = "imap.gmail.com"
 SMTP_PORT = 993
 
@@ -48,7 +48,10 @@ def process_mailbox(M):
             body = msg.get_payload(decode=True)
 
         # print(body.decode)
-        f.write(body.decode('utf-8', errors='ignore'))
+        if type(body) is bytes:
+            f.write(body.decode('utf-8', errors='ignore'))
+        else:
+            f.write(body)
         f.close()
 
 
