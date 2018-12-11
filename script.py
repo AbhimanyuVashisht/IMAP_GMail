@@ -3,7 +3,7 @@ import email
 
 ORG_EMAIL = "@xane.ai"
 FROM_EMAIL = "xane" + ORG_EMAIL
-FROM_PWD = "Xanexane123ai"
+FROM_PWD = "<Enter your password here>"
 SMTP_SERVER = "imap.gmail.com"
 SMTP_PORT = 993
 
